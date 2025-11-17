@@ -123,7 +123,7 @@ const translations = {
       '<li>Piscine & spa</li>',
       '<li>Marchés locaux</li>',
     ].join(''),
-    'activities.tip.title': '💡 Astuce locale',
+    'activities.tip.title': '💡 Astuce',
     'activities.tip.text': "Réservez vos forfaits à l'avance sur <a href='https://www.grand-massif.com' target='_blank'>grand-massif.com</a> pour éviter la file d'attente. L'été, profitez des remontées pour accéder aux crêtes en quelques minutes.",
     'activities.links.all': 'Toutes les activités',
     'activities.links.ski': 'Infos domaine skiable',

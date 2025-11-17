@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hameau retrouvé - Chalet à Les Carroz d'Arâches</title>
+  
+  <meta name="description" content="Louez le chalet Hameau Retrouvé aux Carroz d'Arâches. 3 chambres, 8 personnes, au cœur du Grand Massif. Réservez votre séjour à la montagne.">
+  
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav-fixed">
+    <div class="nav-container">
+      <a class="brand" href="#accueil" onclick="showTab('accueil', event)" data-i18n="brand.name">HAMEAU RETROUVÉ</a>
+      <div class="nav-menu">
+        <a href="#accueil" class="nav-item active" onclick="showTab('accueil', event)" data-i18n="nav.home">Accueil</a>
+        <a href="#localisation" class="nav-item" onclick="showTab('localisation', event)" data-i18n="nav.location">Localisation</a>
+        <a href="#activites" class="nav-item" onclick="showTab('activites', event)" data-i18n="nav.activities">Activités</a>
+        
+        <a href="VOTRE_LIEN_AIRBNB_ICI" class="nav-item btn-nav" target="_blank" rel="noopener noreferrer" data-i18n="nav.book">Réserver</a>
+      </div>
+      <div class="language-switch" role="group" data-i18n="language.switchLabel" data-i18n-attr="aria-label">
+        <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-fullscreen">
+    <div class="hero-image" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.4)), url('assets/images/vue1.jpg') center/cover;"></div>
+    <div class="hero-text">
+      <div class="hero-tag" data-i18n="hero.tag">Les Carroz d'Arâches</div>
+      <h1 data-i18n="hero.title">Votre chalet Hameau Retrouvé</h1>
+      <p data-i18n="hero.subtitle">Un cocon chaleureux pour réunir famille et amis, à deux pas des pistes et des commerces.</p>
+      <div class="hero-cta-group">
+        <a href="#galerie" class="hero-cta" onclick="scrollToGallery(event)" data-i18n="hero.cta">Voir le chalet</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="accueil" class="tab-content active">
+      <div class="section-white">
+        <div class="container-large">
+          <div class="split-layout">
+            <div class="split-text">
+              <span class="label" data-i18n="intro.label">Hameau Retrouvé</span>
+              <h2 data-i18n="intro.title">Votre refuge alpin privé</h2>
+              <p data-i18n="intro.paragraph1">Le niveau supérieur concentre un séjour-cuisine de 29 m² sous charpente, équipé d'un poêle à granulés récent et ouvert sur deux balcons orientés sud.</p>
+              <p data-i18n="intro.paragraph2">Le chalet développe 80 m² habitables sur trois niveaux, avec terrasse de 10 m², jardin clos et vues dégagées sur les sommets du Grand Massif.</p>
+              <p data-i18n="intro.paragraph3">L'étage intermédiaire comprend une chambre double, une chambre twin et une salle de bain avec WC. Le rez-de-jardin regroupe une deuxième chambre double avec accès extérieur, un canapé convertible, une salle de bain additionnelle et un WC indépendant.</p>
+              <div class="stats-row">
+                <div class="stat-box">
+                  <div class="stat-value">3</div>
+                  <div class="stat-label" data-i18n="stats.bedrooms">Chambres</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-value">8</div>
+                  <div class="stat-label" data-i18n="stats.guests">Personnes</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-value">2</div>
+                  <div class="stat-label" data-i18n="stats.bathrooms">Salles de bain</div>
+                </div>
+              </div>
+            </div>
+            <div class="split-image">
+              <img src="assets/images/salon1.jpg" alt="Salon du chalet">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-white" id="galerie">
+        <div class="container-full">
+          <h2 class="section-title center" data-i18n="gallery.title">Gallerie photo</h2>
+          <div class="gallery-minimal">
+            <div class="gallery-img" data-index="0">
+              <button type="button" class="gallery-trigger" data-index="0" aria-label="Voir la photo du salon chaleureux">
+                <img src="assets/images/salon2.jpeg" alt="Salon chaleureux">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.living">Salon</div>
+            </div>
+            <div class="gallery-img" data-index="1">
+              <button type="button" class="gallery-trigger" data-index="1" aria-label="Voir la photo de la chambre confortable">
+                <img src="assets/images/chambre1.jpeg" alt="Chambre confortable">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.bedroom">Chambre</div>
+            </div>
+            <div class="gallery-img" data-index="2">
+              <button type="button" class="gallery-trigger" data-index="2" aria-label="Voir la photo de la cuisine équipée">
+                <img src="assets/images/cuisine.jpeg" alt="Cuisine équipée">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.kitchen">Cuisine</div>
+            </div>
+            <div class="gallery-img" data-index="3">
+              <button type="button" class="gallery-trigger" data-index="3" aria-label="Voir la photo de la salle à manger">
+                <img src="assets/images/salleamanger.jpeg" alt="Salle à manger">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.dining">Salle à manger</div>
+            </div>
+            <div class="gallery-img" data-index="4">
+              <button type="button" class="gallery-trigger" data-index="4" aria-label="Voir la photo de la vue montagne">
+                <img src="assets/images/vue2.jpeg" alt="Vue montagne">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.view">Vue montagne</div>
+            </div>
+            <div class="gallery-img" data-index="5">
+              <button type="button" class="gallery-trigger" data-index="5" aria-label="Voir la photo du poêle à granulés">
+                <img src="assets/images/poele.jpg" alt="Poêle à granulés">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.stove">Poêle à granulés</div>
+            </div>
+            <div class="gallery-img" data-index="6">
+              <button type="button" class="gallery-trigger" data-index="6" aria-label="Voir la photo de l'espace détente">
+                <img src="assets/images/salon3.jpeg" alt="Espace détente">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.lounge">Espace détente</div>
+            </div>
+            <div class="gallery-img" data-index="7">
+              <button type="button" class="gallery-trigger" data-index="7" aria-label="Voir la photo de la deuxième chambre">
+                <img src="assets/images/chambre2.jpeg" alt="Chambre 2">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.bedroom2">Chambre 2</div>
+            </div>
+            <div class="gallery-img" data-index="8">
+              <button type="button" class="gallery-trigger" data-index="8" aria-label="Voir la photo du panorama">
+                <img src="assets/images/vue3.jpeg" alt="Panorama">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.panorama">Panorama</div>
+            </div>
+          </div>
+
+          <div class="lightbox" id="lightbox" aria-hidden="true">
+            <button class="lightbox-close" aria-label="Fermer la galerie">&times;</button>
+            <button class="lightbox-nav prev" aria-label="Photo précédente">&#10094;</button>
+            <div class="lightbox-image-wrapper">
+              <img src="" alt="" id="lightbox-image">
+              <div class="lightbox-caption" id="lightbox-caption"></div>
+            </div>
+            <button class="lightbox-nav next" aria-label="Photo suivante">&#10095;</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-highlight">
+        <div class="container-large">
+          <div class="practical-info-grid">
+            <div class="info-card">
+              <div class="info-icon">🏔️</div>
+              <h3 data-i18n="practical.card1.title">Emplacement idéal</h3>
+              <p data-i18n="practical.card1.text">Boulangerie artisanale, navette Grand Massif et location de matériel au pied du chalet • Super U à 10 min en voiture • Centre station à 1,4 km</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">🎿</div>
+              <h3 data-i18n="practical.card2.title">Pour les skieurs</h3>
+              <p data-i18n="practical.card2.text">Domaine Grand Massif • Local à ski privatif • Navette gratuite pour la télécabine</p>
+            </div>
+            <div class="info-card">
+              <div class="info-icon">✓</div>
+              <h3 data-i18n="practical.card3.title">Tout inclus</h3>
+              <p data-i18n="practical.card3.text">Draps & serviettes • Lits faits à l'arrivée • Kit bébé • Deux places de parking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-gray">
+        <div class="container-large">
+          <h2 class="section-title" data-i18n="features.title">Équipements & Services</h2>
+          <p class="section-subtitle" data-i18n="features.subtitle">Des espaces pensés pour vivre des moments mémorables, hiver comme été.</p>
+          
+          <div class="features-modern">
+            <div class="feature-box">
+              <div class="feature-icon">🛌</div>
+              <h3 data-i18n="features.sleep.title">Confort nuit & bains</h3>
+              <p class="feature-description" data-i18n="features.sleep.desc">3 chambres calmes, rangements généreux.</p>
+              <ul data-i18n="features.sleep.list">
+                <li>Chambre double avec rangements au niveau intermédiaire</li>
+                <li>Chambre twin (2 lits simples) idéale pour enfants ou amis</li>
+                <li>Suite rez-de-jardin : chambre double + canapé convertible</li>
+                <li>2 salles de bain avec baignoire + 2 WC dont 1 indépendant</li>
+                <li>Linge fourni et lits faits à l'arrivée</li>
+                <li>Kit bébé disponible (lit parapluie, chaise haute)</li>
+              </ul>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon">🍽️</div>
+              <h3 data-i18n="features.dining.title">Moments gourmands</h3>
+              <p class="feature-description" data-i18n="features.dining.desc">Cuisine équipée comme à la maison pour vos festins savoyards.</p>
+              <ul data-i18n="features.dining.list">
+                <li>Séjour de 29 m² au dernier niveau</li>
+                <li>Poêle à granulés récent et ambiance bois chaleureuse</li>
+                <li>Cuisine aménagée : four, plaques, micro-ondes, lave-vaisselle</li>
+                <li>Deux balcons plein sud + terrasse et jardin de 10 m²</li>
+                <li>Appareils à fondue/raclette et vaisselle pour 8 convives</li>
+              </ul>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon">🎿</div>
+              <h3 data-i18n="features.ski.title">Ski & outdoor</h3>
+              <p class="feature-description" data-i18n="features.ski.desc">Tout est prêt pour vos journées sur les pistes.</p>
+              <ul data-i18n="features.ski.list">
+                <li>Local à ski privatif chauffé et sécurisé</li>
+                <li>Deux places de parking extérieures dédiées</li>
+                <li>Navette gratuite vers la télécabine juste en bas de la route</li>
+                <li>Jardin clos pour les jeux d'hiver et les pique-niques</li>
+                <li>Accès direct au domaine du Grand Massif (265 km de pistes)</li>
+              </ul>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon">✨</div>
+              <h3 data-i18n="features.services.title">Services inclus</h3>
+              <p class="feature-description" data-i18n="features.services.desc">On s’occupe des détails, vous profitez.</p>
+              <ul data-i18n="features.services.list">
+                <li>Lits faits, linge de maison complet et produits d'accueil</li>
+                <li>Chauffage mixte : poêle à granulés + radiateurs électriques</li>
+                <li>Chauffe-eau électrique et VMC simple flux pour un confort constant</li>
+                <li>Cave/local pratique pour skis, luges ou vélos</li>
+                <li>Maison louée avec tout le nécessaire du quotidien</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="booking-cta-section">
+            <div class="booking-cta-card">
+              <h3 data-i18n="booking.title">Prêt à vivre l'expérience ?</h3>
+              <p data-i18n="booking.subtitle">Consultez nos tarifs en direct et réservez en deux minutes.</p>
+              <div class="cta-buttons">
+                <a href="VOTRE_LIEN_AIRBNB_ICI" class="btn-primary-large" target="_blank" rel="noopener noreferrer" data-i18n="booking.primary">Réserver sur Airbnb</a>
+                
+                <a href="#contact" class="btn-secondary-large" onclick="showTab('contact', event)" data-i18n="booking.secondary">Poser une question</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-white">
+        <div class="container-large">
+          <h2 class="section-title center" data-i18n="reviews.title">Ce que nos voyageurs adorent</h2>
+          <div class="reviews-grid">
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text" data-i18n="reviews.item1.text">"Chalet splendide, très propre et super bien placé. La boulangerie juste en bas est un vrai plus pour les petits-déjeuners. Nous reviendrons !"</p>
+              <p class="review-author" data-i18n="reviews.item1.author">Ginette</p>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text" data-i18n="reviews.item2.text">"On se sent comme chez soi. Confort, déco chaleureuse, équipements complets. Le local à ski chauffé est top après une journée sur les pistes."</p>
+              <p class="review-author" data-i18n="reviews.item2.author">Joëlle</p>
+            </div>
+            <div class="review-card">
+              <div class="review-stars">★★★★★</div>
+              <p class="review-text" data-i18n="reviews.item3.text">"Parfait pour une tribu ! Cuisine très bien équipée pour les soirées raclette, poêle à granulés cosy et hôtes ultra réactifs."</p>
+              <p class="review-author" data-i18n="reviews.item3.author">Sylvie</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="localisation" class="tab-content">
+      <div class="section-white">
+        <div class="container-large">
+          <div class="location-header">
+            <h2 data-i18n="location.title">Les Carroz d'Arâches</h2>
+            <p class="lead" data-i18n="location.lead">Station-village authentique, reliée au Grand Massif et accessible en 1h depuis Genève.</p>
+          </div>
+
+          <div class="proximity-grid">
+            <div class="proximity-item">
+              <div class="proximity-icon">🥖</div>
+              <div class="proximity-content">
+                <h4 data-i18n="location.items.bakery.title">Boulangerie artisanale</h4>
+                <p data-i18n="location.items.bakery.text"><strong>2 min à pied</strong> – pains & viennoiseries 7j/7</p>
+              </div>
+            </div>
+            <div class="proximity-item">
+              <div class="proximity-icon">🚌</div>
+              <div class="proximity-content">
+                <h4 data-i18n="location.items.shuttle.title">Navette gratuite</h4>
+                <p data-i18n="location.items.shuttle.text">Arrêt à <strong>200 m</strong> – toutes les 15 min vers les pistes</p>
+              </div>
+            </div>
+            <div class="proximity-item">
+              <div class="proximity-icon">🏪</div>
+              <div class="proximity-content">
+                <h4 data-i18n="location.items.store.title">Supérette Sherpa</h4>
+                <p data-i18n="location.items.store.text"><strong>12 min à pied</strong> – produits locaux & plats traiteur</p>
+              </div>
+            </div>
+            <div class="proximity-item">
+              <div class="proximity-icon">🎿</div>
+              <div class="proximity-content">
+                <h4 data-i18n="location.items.center.title">Centre station / ESF</h4>
+                <p data-i18n="location.items.center.text"><strong>1,4 km</strong> – commerces, restaurants, écoles de ski</p>
+              </div>
+            </div>
+            <div class="proximity-item">
+              <div class="proximity-icon">✈️</div>
+              <div class="proximity-content">
+                <h4 data-i18n="location.items.airport.title">Aéroport Genève</h4>
+                <p data-i18n="location.items.airport.text"><strong>1h</strong> en voiture – transferts possibles</p>
+              </div>
+            </div>
+            <div class="proximity-item">
+              <div class="proximity-icon">🌲</div>
+              <div class="proximity-content">
+                <h4 data-i18n="location.items.plateau.title">Plateau d'Agy</h4>
+                <p data-i18n="location.items.plateau.text"><strong>10 km</strong> – ski de fond & raquettes</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-modern">
+            <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=6.633%2C46.021%2C6.653%2C46.031&amp;layer=mapnik&amp;marker=46.026%2C6.643" allowfullscreen loading="lazy"></iframe>
+          </div>
+          
+          <div class="location-info">
+            <a href="https://www.openstreetmap.org/?mlat=46.026&amp;mlon=6.643#map=15/46.026/6.643" target="_blank" class="link-modern" data-i18n="location.mapLink">Ouvrir dans Maps →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="activites" class="tab-content">
+      <div class="section-gray">
+        <div class="container-large">
+          <h2 class="section-title center" data-i18n="activities.title">Que faire aux Carroz ?</h2>
+          <p class="section-subtitle" data-i18n="activities.subtitle">Une station quatre saisons qui comblera sportifs, familles et épicuriens.</p>
+          
+          <div class="activities-modern">
+            <div class="activity-modern">
+              <div class="activity-image-modern">
+                <img src="assets/images/ski.jpg" alt="Ski sur le domaine du Grand Massif">
+              </div>
+              <div class="activity-info-modern">
+                <span class="season-tag winter" data-i18n="activities.winter.tag">Hiver</span>
+                <h3 data-i18n="activities.winter.title">Saison hivernale</h3>
+                <ul data-i18n="activities.winter.list">
+                  <li>Ski alpin & snowboard (Grand Massif)</li>
+                  <li>Ski de fond (Plateau d'Agy)</li>
+                  <li>Raquettes en montagne</li>
+                  <li>Patinoire & traîneau</li>
+                  <li>Spa Aquacîme</li>
+                  <li>Gastronomie savoyarde</li>
+                  <li>Marchés de Noël</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="activity-modern reverse">
+              <div class="activity-image-modern">
+                <img src="assets/images/vtt.jpeg" alt="VTT en montagne aux Carroz d'Arâches">
+              </div>
+              <div class="activity-info-modern">
+                <span class="season-tag summer" data-i18n="activities.summer.tag">Été</span>
+                <h3 data-i18n="activities.summer.title">Saison estivale</h3>
+                <ul data-i18n="activities.summer.list">
+                  <li>Randonnée en altitude</li>
+                  <li>VTT & vélo de descente</li>
+                  <li>Parapente & escalade</li>
+                  <li>Piscine & spa</li>
+                  <li>Golf & tennis</li>
+                  <li>Marchés locaux</li>
+                  <li>Yoga face aux montagnes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="activities-footer">
+            <div class="activities-tip">
+              <h4 data-i18n="activities.tip.title">💡 Astuce locale</h4>
+              <p data-i18n="activities.tip.text">Réservez vos forfaits à l'avance sur <a href="https://www.grand-massif.com" target="_blank">grand-massif.com</a> pour éviter la file d'attente. L'été, profitez des remontées pour accéder aux crêtes en quelques minutes.</p>
+            </div>
+            <div class="btn-group-center">
+              <a href="https://www.lescarroz.com/activites-et-loisirs/" target="_blank" class="btn-modern" data-i18n="activities.links.all">Toutes les activités</a>
+              <a href="https://www.lescarroz.com/domaine-skiable/" target="_blank" class="btn-modern" data-i18n="activities.links.ski">Infos domaine skiable</a>
+              <a href="https://www.lescarroz.com/agenda/" target="_blank" class="btn-modern" data-i18n="activities.links.events">Agenda & événements</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="tab-content">
+      <div class="section-white">
+        <div class="container-medium">
+          <div class="contact-modern">
+            <div class="contact-header-modern">
+              <h2 data-i18n="contact.title">Parlons de votre séjour</h2>
+              <p data-i18n="contact.subtitle">Nous répondons sous 2h en journée pour vous aider à organiser votre venue.</p>
+            </div>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">⚡</div>
+                <h4 data-i18n="contact.booking.title">Réservation</h4>
+                <p data-i18n="contact.booking.text">Vérifiez les disponibilités et réservez directement via Airbnb.</p>
+                <a href="VOTRE_LIEN_AIRBNB_ICI" class="btn-method" target="_blank" rel="noopener noreferrer" data-i18n="contact.booking.cta">Réserver sur Airbnb</a>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon">🤝</div>
+                <h4 data-i18n="contact.custom.title">Demande personnalisée</h4>
+                <p data-i18n="contact.custom.text">Besoin de conseils ou d'un devis sur mesure ? Envoyez-nous un message.</p>
+              </div>
+            </div>
+
+            <form name="contact" netlify class="form-modern">
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="name" data-i18n="contact.form.name">Nom complet</label>
+                  <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-field">
+                  <label for="email" data-i18n="contact.form.email">Email</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="message" data-i18n="contact.form.message">Votre message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+              </div>
+              <button type="submit" class="btn-submit-modern" data-i18n="contact.form.submit">Envoyer le message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-modern">
+    <div class="container-large">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3 data-i18n="footer.brand">Hameau Retrouvé</h3>
+          <p data-i18n="footer.tagline">Chalet d'exception aux Carroz d'Arâches</p>
+        </div>
+        <div class="footer-col footer-nav">
+          <h4 data-i18n="footer.nav">Navigation</h4>
+          <div class="footer-links-compact">
+            <a href="#accueil" onclick="showTab('accueil', event)" data-i18n="footer.links.home">Accueil</a>
+            <a href="#localisation" onclick="showTab('localisation', event)" data-i18n="footer.links.location">Localisation</a>
+            <a href="#activites" onclick="showTab('activites', event)" data-i18n="footer.links.activities">Activités</a>
+            <a href="#contact" onclick="showTab('contact', event)" data-i18n="footer.links.contact">Contact</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="footer.info">Informations</h4>
+          <p data-i18n="footer.address">Les Carroz d'Arâches<br>Haute-Savoie, 74300</p>
+          <a href="mentions-legales.html" target="_blank" rel="noopener noreferrer" data-i18n="footer.legal">Mentions légales</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="footer.copyright">&copy; 2025 Hameau Retrouvé. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

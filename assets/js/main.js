@@ -274,10 +274,9 @@ const translations = {
       '<li>Paragliding & climbing</li>',
       '<li>Pool & spa</li>',
       '<li>Golf & tennis</li>',
-      '<li>Local markets</li>',
-      '<li>Yoga facing the peaks</li>'
+      '<li>Local markets</li>'
     ].join(''),
-    'activities.tip.title': '💡 Local tip',
+    'activities.tip.title': '💡 Tip',
     'activities.tip.text': "Pre-book your lift passes on <a href='https://www.grand-massif.com' target='_blank'>grand-massif.com</a> to skip the line. In summer, use the lifts to reach the ridges in minutes.",
     'activities.links.all': 'All activities',
     'activities.links.ski': 'Ski area info',

@@ -121,9 +121,7 @@ const translations = {
       '<li>VTT & vélo de descente</li>',
       '<li>Parapente & escalade</li>',
       '<li>Piscine & spa</li>',
-      '<li>Golf & tennis</li>',
       '<li>Marchés locaux</li>',
-      '<li>Yoga face aux montagnes</li>'
     ].join(''),
     'activities.tip.title': '💡 Astuce locale',
     'activities.tip.text': "Réservez vos forfaits à l'avance sur <a href='https://www.grand-massif.com' target='_blank'>grand-massif.com</a> pour éviter la file d'attente. L'été, profitez des remontées pour accéder aux crêtes en quelques minutes.",

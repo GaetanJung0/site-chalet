@@ -15,16 +15,24 @@
   <nav class="nav-fixed">
     <div class="nav-container">
       <a class="brand" href="#accueil" onclick="showTab('accueil', event)" data-i18n="brand.name">HAMEAU RETROUVÉ</a>
+      
+      <button class="hamburger" aria-label="Menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
       <div class="nav-menu">
         <a href="#accueil" class="nav-item active" onclick="showTab('accueil', event)" data-i18n="nav.home">Accueil</a>
         <a href="#localisation" class="nav-item" onclick="showTab('localisation', event)" data-i18n="nav.location">Localisation</a>
         <a href="#activites" class="nav-item" onclick="showTab('activites', event)" data-i18n="nav.activities">Activités</a>
         
         <a href="VOTRE_LIEN_AIRBNB_ICI" class="nav-item btn-nav" target="_blank" rel="noopener noreferrer" data-i18n="nav.book">Réserver</a>
-      </div>
-      <div class="language-switch" role="group" data-i18n="language.switchLabel" data-i18n-attr="aria-label">
-        <button type="button" class="lang-btn active" data-lang="fr">FR</button>
-        <button type="button" class="lang-btn" data-lang="en">EN</button>
+        
+        <div class="language-switch" role="group" data-i18n="language.switchLabel" data-i18n-attr="aria-label">
+          <button type="button" class="lang-btn active" data-lang="fr">FR</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </div>
       </div>
     </div>
   </nav>
@@ -76,79 +84,97 @@
 
       <div class="section-white" id="galerie">
         <div class="container-full">
-          <h2 class="section-title center" data-i18n="gallery.title">Gallerie photo</h2>
+          <h2 class="section-title center" data-i18n="gallery.title">Galerie photo</h2>
           <div class="gallery-minimal">
             <div class="gallery-img" data-index="0">
-              <button type="button" class="gallery-trigger" data-index="0" aria-label="Voir la photo du salon chaleureux">
-                <img src="assets/images/salon2.jpeg" alt="Salon chaleureux">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.living">Salon</div>
-            </div>
-            <div class="gallery-img" data-index="1">
-              <button type="button" class="gallery-trigger" data-index="1" aria-label="Voir la photo de la chambre confortable">
-                <img src="assets/images/chambre1.jpeg" alt="Chambre confortable">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.bedroom">Chambre</div>
-            </div>
-            <div class="gallery-img" data-index="2">
-              <button type="button" class="gallery-trigger" data-index="2" aria-label="Voir la photo de la cuisine équipée">
-                <img src="assets/images/cuisine.jpeg" alt="Cuisine équipée">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.kitchen">Cuisine</div>
-            </div>
-            <div class="gallery-img" data-index="3">
-              <button type="button" class="gallery-trigger" data-index="3" aria-label="Voir la photo de la salle à manger">
-                <img src="assets/images/salleamanger.jpeg" alt="Salle à manger">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.dining">Salle à manger</div>
-            </div>
-            <div class="gallery-img" data-index="4">
-              <button type="button" class="gallery-trigger" data-index="4" aria-label="Voir la photo de la vue montagne">
-                <img src="assets/images/vue2.jpeg" alt="Vue montagne">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.view">Vue montagne</div>
-            </div>
-            <div class="gallery-img" data-index="5">
-              <button type="button" class="gallery-trigger" data-index="5" aria-label="Voir la photo du poêle à granulés">
-                <img src="assets/images/poele.jpg" alt="Poêle à granulés">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.stove">Poêle à granulés</div>
-            </div>
-            <div class="gallery-img" data-index="6">
-              <button type="button" class="gallery-trigger" data-index="6" aria-label="Voir la photo de l'espace détente">
-                <img src="assets/images/salon3.jpeg" alt="Espace détente">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.lounge">Espace détente</div>
-            </div>
-            <div class="gallery-img" data-index="7">
-              <button type="button" class="gallery-trigger" data-index="7" aria-label="Voir la photo de la deuxième chambre">
-                <img src="assets/images/chambre2.jpeg" alt="Chambre 2">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.bedroom2">Chambre 2</div>
-            </div>
-            <div class="gallery-img" data-index="8">
-              <button type="button" class="gallery-trigger" data-index="8" aria-label="Voir la photo du panorama">
-                <img src="assets/images/vue3.jpeg" alt="Panorama">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.panorama">Panorama</div>
-            </div>
-            <div class="gallery-img" data-index="9">
-              <button type="button" class="gallery-trigger" data-index="9" aria-label="Voir la photo du chalet sous la neige">
-                <img src="assets/images/chaletneige.jpeg" alt="Chalet sous la neige">
-              </button>
-              <div class="gallery-label" data-i18n="gallery.labels.snow_chalet">Chalet sous la neige</div>
-            </div>
-            <div class="gallery-img" data-index="10">
-              <button type="button" class="gallery-trigger" data-index="10" aria-label="Voir la photo du chalet enneigé">
-                <img src="assets/images/neigechalet.jpeg" alt="Chalet enneigé">
+              <button type="button" class="gallery-trigger" data-index="0" aria-label="Voir la photo du chalet enneigé">
+                <img src="assets/images/1neigechalet.jpeg" alt="Chalet enneigé">
               </button>
               <div class="gallery-label" data-i18n="gallery.labels.snow_chalet_2">Chalet enneigé</div>
             </div>
-            <div class="gallery-img" data-index="11">
-              <button type="button" class="gallery-trigger" data-index="11" aria-label="Voir la photo de la vue sous la neige">
-                <img src="assets/images/vueneige.jpeg" alt="Vue sous la neige">
+            <div class="gallery-img" data-index="1">
+              <button type="button" class="gallery-trigger" data-index="1" aria-label="Voir la photo de la vue sous la neige">
+                <img src="assets/images/2vueneige.jpeg" alt="Vue sous la neige">
               </button>
               <div class="gallery-label" data-i18n="gallery.labels.snow_view_2">Vue sous la neige</div>
+            </div>
+            <div class="gallery-img" data-index="2">
+              <button type="button" class="gallery-trigger" data-index="2" aria-label="Voir la photo du chalet sous la neige">
+                <img src="assets/images/3chaletneige.jpeg" alt="Chalet sous la neige">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.snow_chalet">Chalet sous la neige</div>
+            </div>
+            <div class="gallery-img" data-index="3">
+              <button type="button" class="gallery-trigger" data-index="3" aria-label="Voir la photo du salon">
+                <img src="assets/images/4salon2.jpeg" alt="Salon">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.living">Salon</div>
+            </div>
+            <div class="gallery-img" data-index="4">
+              <button type="button" class="gallery-trigger" data-index="4" aria-label="Voir la photo du poêle à granulés">
+                <img src="assets/images/5poele.jpg" alt="Poêle à granulés">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.stove">Poêle à granulés</div>
+            </div>
+            <div class="gallery-img" data-index="5">
+              <button type="button" class="gallery-trigger" data-index="5" aria-label="Voir la photo de l'espace détente">
+                <img src="assets/images/6salon3.jpeg" alt="Espace détente">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.lounge">Espace détente</div>
+            </div>
+            <div class="gallery-img" data-index="6">
+              <button type="button" class="gallery-trigger" data-index="6" aria-label="Voir la photo de la salle à manger">
+                <img src="assets/images/7salleamanger.jpeg" alt="Salle à manger">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.dining">Salle à manger</div>
+            </div>
+            <div class="gallery-img" data-index="7">
+              <button type="button" class="gallery-trigger" data-index="7" aria-label="Voir la photo du salon">
+                <img src="assets/images/8salon4.jpeg" alt="Salon">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.living">Salon</div>
+            </div>
+            <div class="gallery-img" data-index="8">
+              <button type="button" class="gallery-trigger" data-index="8" aria-label="Voir la photo de la salle à manger">
+                <img src="assets/images/9salleamanger2.jpeg" alt="Salle à manger">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.dining">Salle à manger</div>
+            </div>
+            <div class="gallery-img" data-index="9">
+              <button type="button" class="gallery-trigger" data-index="9" aria-label="Voir la photo de la chambre">
+                <img src="assets/images/10chambre1.jpeg" alt="Chambre">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.bedroom">Chambre</div>
+            </div>
+            <div class="gallery-img" data-index="10">
+              <button type="button" class="gallery-trigger" data-index="10" aria-label="Voir la photo de la vue montagne">
+                <img src="assets/images/11vue1.jpg" alt="Vue montagne">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.view">Vue montagne</div>
+            </div>
+            <div class="gallery-img" data-index="11">
+              <button type="button" class="gallery-trigger" data-index="11" aria-label="Voir la photo de la deuxième chambre">
+                <img src="assets/images/12chambre2.jpeg" alt="Chambre 2">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.bedroom2">Chambre 2</div>
+            </div>
+            <div class="gallery-img" data-index="12">
+              <button type="button" class="gallery-trigger" data-index="12" aria-label="Voir la photo de la vue montagne">
+                <img src="assets/images/13vue2.jpeg" alt="Vue montagne">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.view">Vue montagne</div>
+            </div>
+            <div class="gallery-img" data-index="13">
+              <button type="button" class="gallery-trigger" data-index="13" aria-label="Voir la photo du chalet de loin">
+                <img src="assets/images/14chaletdeloin.jpeg" alt="Chalet de loin">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.chalet_far">Chalet de loin</div>
+            </div>
+            <div class="gallery-img" data-index="14">
+              <button type="button" class="gallery-trigger" data-index="14" aria-label="Voir la photo du panorama">
+                <img src="assets/images/15vue3.jpeg" alt="Panorama">
+              </button>
+              <div class="gallery-label" data-i18n="gallery.labels.panorama">Panorama</div>
             </div>
           </div>
 
@@ -179,7 +205,7 @@
             </div>
             <div class="info-card">
               <div class="info-icon">✓</div>
-              <h3 data-i18n="practical.card3.title">Tout inclus</h3>
+              <h3 data-i18n="practical.card3.title">Inclus</h3>
               <p data-i18n="practical.card3.text">Draps & serviettes • Lits faits à l'arrivée • Kit bébé • Deux places de parking</p>
             </div>
           </div>
@@ -310,7 +336,7 @@
               <div class="proximity-icon">🏪</div>
               <div class="proximity-content">
                 <h4 data-i18n="location.items.store.title">Spar</h4>
-                <p data-i18n="location.items.store.text"><strong>3 min en voiture</strong> – produits locaux & plats traiteur</p>
+                <p data-i18n="location.items.store.text"><strong>3 min en voiture</strong></p>
               </div>
             </div>
             <div class="proximity-item">

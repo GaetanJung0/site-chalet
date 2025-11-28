@@ -20,7 +20,7 @@ const translations = {
     'stats.bedrooms': 'Chambres',
     'stats.guests': 'Personnes',
     'stats.bathrooms': 'Salles de bain',
-    'gallery.title': 'Gallerie photo',
+    'gallery.title': 'Galerie photo',
     'gallery.labels.living': 'Salon',
     'gallery.labels.bedroom': 'Chambre',
     'gallery.labels.kitchen': 'Cuisine',
@@ -33,11 +33,12 @@ const translations = {
     'gallery.labels.snow_chalet': 'Chalet sous la neige',
     'gallery.labels.snow_chalet_2': 'Chalet enneigé',
     'gallery.labels.snow_view_2': 'Vue sous la neige',
+    'gallery.labels.chalet_far': 'Chalet de loin',
     'practical.card1.title': 'Emplacement idéal',
     'practical.card1.text': 'Boulangerie artisanale, navette Grand Massif et location de matériel au pied du chalet • Spar à 3 min en voiture • Centre station à 1,4 km',
     'practical.card2.title': 'Pour les skieurs',
     'practical.card2.text': 'Domaine Grand Massif • Local à ski privatif • Navette gratuite pour la télécabine',
-    'practical.card3.title': 'Tout inclus',
+    'practical.card3.title': 'Inclus',
     'practical.card3.text': "Draps & serviettes • Lits faits à l'arrivée • Kit bébé • Deux places de parking",
     'features.title': 'Équipements & Services',
     'features.subtitle': 'Des espaces pensés pour vivre des moments mémorables, hiver comme été.',
@@ -95,7 +96,7 @@ const translations = {
     'location.items.shuttle.title': 'Navette gratuite',
     'location.items.shuttle.text': 'Arrêt à <strong>200 m</strong> – toutes les 15 min vers les pistes',
     'location.items.store.title': 'Spar',
-    'location.items.store.text': '<strong>3 min en voiture</strong> – produits locaux & plats traiteur',
+    'location.items.store.text': '<strong>3 min en voiture</strong>',
     'location.items.center.title': 'Centre station / ESF',
     'location.items.center.text': '<strong>1,4 km</strong> – commerces, restaurants, écoles de ski',
     'location.items.airport.title': 'Aéroport Genève',
@@ -187,11 +188,12 @@ const translations = {
     'gallery.labels.snow_chalet': 'Snowy chalet',
     'gallery.labels.snow_chalet_2': 'Chalet in snow',
     'gallery.labels.snow_view_2': 'View in snow',
+    'gallery.labels.chalet_far': 'Chalet from afar',
     'practical.card1.title': 'Prime location',
     'practical.card1.text': 'Artisan bakery, Grand Massif shuttle, and ski rental next door • Spar grocery 3 min drive • Village center 1.4 km away',
     'practical.card2.title': 'For skiers',
     'practical.card2.text': 'Grand Massif domain • Private ski locker • Free shuttle to the gondola',
-    'practical.card3.title': 'All-inclusive comfort',
+    'practical.card3.title': 'Included',
     'practical.card3.text': 'Bed linen & towels • Beds made on arrival • Baby kit • Two parking spots',
     'features.title': 'Amenities & Services',
     'features.subtitle': 'Spaces designed for memorable moments in every season.',
@@ -249,7 +251,7 @@ const translations = {
     'location.items.shuttle.title': 'Free shuttle',
     'location.items.shuttle.text': 'Stop <strong>200 m</strong> away – every 15 min to the lifts',
     'location.items.store.title': 'Spar grocery',
-    'location.items.store.text': '<strong>3 min drive</strong> – local produce & prepared dishes',
+    'location.items.store.text': '<strong>3 min drive</strong>',
     'location.items.center.title': 'Resort center / ESF',
     'location.items.center.text': '<strong>1.4 km</strong> – shops, restaurants, ski schools',
     'location.items.airport.title': 'Geneva airport',
@@ -597,3 +599,32 @@ window.scrollToGallery = event => {
 };
 
 window.showTab = showTab;
+
+function initHamburgerMenu() {
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+  const navLinks = document.querySelectorAll('.nav-item');
+
+  if (!hamburger || !navMenu) return;
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+    const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
+    hamburger.setAttribute('aria-expanded', !expanded);
+    // Prevent scrolling when menu is open
+    document.body.style.overflow = !expanded ? 'hidden' : '';
+  });
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+      hamburger.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initHamburgerMenu);
+
